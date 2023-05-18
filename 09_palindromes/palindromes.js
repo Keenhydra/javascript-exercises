@@ -1,8 +1,6 @@
 const palindromes = function (word) {
-    const regex = /!,. /g;
-    stripped = word.toLowerCase("").replaceAll(regex, "");
+    stripped = word.toLowerCase("").replaceAll(" ","").replaceAll("!","").replaceAll(",","").replaceAll(".","");
     inverse = stripped.split("").reverse().join("");
-    console.log(regex);
     if (stripped === inverse){
         return true;
     }else {
